@@ -1,0 +1,47 @@
+Employee ID  | Name            | Department | Role      | Attendance (%) | Hours Worked | Sales ($) | Goals Met (%) | Bonus Earned ($) | Training Hours
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+1001         | John Doe        | Sales      | Manager   | 95             | 160          | 10000     | 90            | 1500             | 20
+1002         | Jane Smith      | Sales      | Executive | 92             | 150          | 9000      | 85            | 1300             | 15
+1003         | Mark Johnson    | HR         | Executive | 98             | 140          | 0         | 80            | 1000             | 10
+1004         | Emily Davis     | Marketing  | Manager   | 90             | 160          | 11000     | 95            | 1600             | 25
+1005         | Sarah Lee       | Sales      | Executive | 85             | 145          | 7000      | 75            | 1200             | 20
+1006         | Mike Brown      | HR         | Manager   | 97             | 155          | 0         | 95            | 1400             | 12
+1007         | Olivia Wilson   | Marketing  | Executive | 96             | 150          | 8500      | 70            | 1100             | 30
+1008         | William Green   | Sales      | Manager   | 94             | 160          | 9500      | 88            | 1450             | 18
+1009         | Mia Clark       | IT         | Executive | 99             | 170          | 0         | 85            | 1250             | 5
+1010         | James Miller    | IT         | Manager   | 97             | 160          | 0         | 90            | 1350             | 8
+1011         | Sophia Lewis    | HR         | Manager   | 100            | 180          | 0         | 95            | 1500             | 20
+1012         | Ethan Adams     | Marketing  | Executive | 93             | 155          | 9200      | 80            | 1200             | 22
+1013         | Olivia Carter   | Sales      | Executive | 90             | 140          | 6500      | 85            | 1000             | 10
+1014         | Noah Walker     | Marketing  | Manager   | 91             | 150          | 10500     | 90            | 1300             | 14
+1015         | Ava Harris      | IT         | Executive | 89             | 165          | 0         | 75            | 1100             | 20
+1016         | Lucas Scott     | HR         | Executive | 97             | 150          | 0         | 80            | 1200             | 8
+1017         | Isabella Hall   | Marketing  | Manager   | 92             | 160          | 11500     | 93            | 1400             | 18
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+-- Questions --
+-- Basic Level -- 
+
+Q-1- Calculate the total sales.
+Ans-- =SUM($G$2:$G$31) -- (Use the SUM function for the sales column) --
+Q-2- What is the average attendance across all employees?
+Ans-- =AVERAGE($E$2:$E$31) -- (will return the average attendance) --
+Q-3- Which employee has the highest sales?
+Ans-- =INDEX($B$2:$B$31, MATCH(MAX($G$2:$G$31), $G$2:$G$31, 0))
+Q-4- Calculate the average bonus earned for all employees.
+Ans-- =AVERAGE($I$2:$I$31)
+Q-5- How many employees have completed 90% or more of their goals?
+Ans-- =COUNTIF($H$2:$H$31, ">=90")
+
+-- Intermediate Level --
+
+Q-1- Find the total training hours for employees in the Sales department.
+Ans-- =SUMIF($C$2:$C$31,"Sales",$J$2:$J$31)
+Q-2- Calculate the average sales for employees who have an attendance rate of greater than or equal to 95%.
+Ans-- =AVERAGEIF($E$2:$E$31,">=95",$G$2:$G$31)
+Q-3- What is the total bonus earned by employees in the Marketing department?
+Ans-- =SUMIF($C$2:$C$31,"Marketing",$I$2:$I$31)
+Q-4- Calculate the employee with the highest attendance.
+Ans-- =INDEX($B$2:$B$31,MATCH(MAX($E$2:$E$31),$E$2:$E$31,0))
+
