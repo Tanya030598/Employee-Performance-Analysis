@@ -21,34 +21,30 @@ Employee ID  | Name            | Department | Role      | Attendance (%) | Hours
 
 
 -- Questions --
--- Basic Level -- 
 
-Q-1- Calculate the total sales.
-Ans-- =SUM($G$2:$G$31) -- (Use the SUM function for the sales column) --
+/*Find the total training hours for employees in the Sales department.*/
+=SUMIF($C$2:$C$31,"Sales",$J$2:$J$31)
 
-Q-2- What is the average attendance across all employees?
-Ans-- =AVERAGE($E$2:$E$31) -- (will return the average attendance) --
+/*Calculate the average sales for employees who have an attendance rate of greater than or equal to 95%.*/
+=AVERAGEIF($E$2:$E$31,">=95",$G$2:$G$31)
 
-Q-3- Which employee has the highest sales?
-Ans-- =INDEX($B$2:$B$31, MATCH(MAX($G$2:$G$31), $G$2:$G$31, 0))
+/*What is the total bonus earned by employees in the Marketing department?*/
+=SUMIF($C$2:$C$31,"Marketing",$I$2:$I$31)
 
-Q-4- Calculate the average bonus earned for all employees.
-Ans-- =AVERAGE($I$2:$I$31)
+/*Calculate the employee with the highest attendance.*/
+=INDEX($B$2:$B$31,MATCH(MAX($E$2:$E$31),$E$2:$E$31,0))
 
-Q-5- How many employees have completed 90% or more of their goals?
-Ans-- =COUNTIF($H$2:$H$31, ">=90")
+/*Calculate the total sales.*/
+=SUM($G$2:$G31) -- (Use the SUM function for the sales column) --
 
--- Intermediate Level --
+/*What is the average attendance across all employees?*/
+=AVERAGE($E$2:$E31) -- (will return the average attendance) --
 
-Q-1- Find the total training hours for employees in the Sales department.
-Ans-- =SUMIF($C$2:$C$31,"Sales",$J$2:$J$31)
+/*Which employee has the highest sales?*/
+=INDEX($B$2:$B31, MATCH(MAX($G$2:$G31), $G$2:$G31, 0))
 
-Q-2- Calculate the average sales for employees who have an attendance rate of greater than or equal to 95%.
-Ans-- =AVERAGEIF($E$2:$E$31,">=95",$G$2:$G$31)
+/*Calculate the average bonus earned for all employees.*/
+=AVERAGE($I$2:$I$31)
 
-Q-3- What is the total bonus earned by employees in the Marketing department?
-Ans-- =SUMIF($C$2:$C$31,"Marketing",$I$2:$I$31)
-
-Q-4- Calculate the employee with the highest attendance.
-Ans-- =INDEX($B$2:$B$31,MATCH(MAX($E$2:$E$31),$E$2:$E$31,0))
-
+/*How many employees have completed 90% or more of their goals?*/
+=COUNTIF($H$2:$H$31, ">=90")
