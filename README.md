@@ -8,4 +8,4 @@ TECHNICAL SKILLS: It requires skills in data entry, formula usage (e.g., SUM, AV
 
 RESULT: It gives a clear view of how employees are performing, showing what they do well and where they can improve. It uses charts and data summaries to help make better decisions.
 
-LINK: https://github.com/Tanya030598/Employee-Performance-Analysis
+LINK: https://github.com/Tanya030598/Employee-Performance-Analysis/blob/main/Employee-Performance-Analysis.excel
